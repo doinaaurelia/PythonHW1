@@ -56,6 +56,31 @@
 # указанных позициях. Позиции хранятся в файле file.txt в 
 # одной строке одно число.
 
+from random import randint
+n = int(input('Введите число N - '))
+numbers = []
+for i in range(n):
+    numbers.append(randint(-n, n+1))
+print(numbers)
+
+f = open('file.txt', 'w')
+while True:
+s = input('Укажите позицию для вычисления - ')
+if s == "":
+break
+f.write(s+"\n")
+f.close()
+
+result = 1
+f = open('file.txt', 'r')
+for line in f:
+if line == "":
+break
+result *= numbers[int(line)]
+f.close()
+print(result)
+
+
 ########################################################################
 ########################################################################
 # 5. Реализуйте алгоритм перемешивания списка.
@@ -63,15 +88,15 @@
 
 
 
-from random import randint
+#from random import randint
 
 
-list = [5, 7, 2, 4, 9]
-newList = []
+#list = [5, 7, 2, 4, 9]
+#newList = []
 
-while len(list):
-    ind = randint(0, len(list) - 1)
-    newList.append(list[ind])
-    list.pop(ind)
+#while len(list):
+#    ind = randint(0, len(list) - 1)
+#    newList.append(list[ind])
+#    list.pop(ind)
 
-print(newList)
+#print(newList)

@@ -83,13 +83,13 @@
 # - A (3,6); B (2,1) -> 5,09
 # - A (7,-5); B (1,-1) -> 7,21
 
-# import math
-# co1 = input("Введите точки координат x ")
-# co2 = input("Введите точку координат y ")
-# co1 = co1.split(",")
-# co2 = co2.split(",")
-# if co1 and co2 == 0:
-#     print("try again")
+import math
+co1 = input("Введите точки координат x ")
+co2 = input("Введите точку координат y ")
+co1 = co1.split(",")
+co2 = co2.split(",")
+if co1 and co2 == 0:
+    print("try again")
 
-# distance = math.sqrt(((int(co1[0])-int(co2[0]))**2)+((int(co1[1])-int(co2[1]))**2))
-# print(distance)
+distance = math.sqrt(((int(co1[0])-int(co2[0]))**2)+((int(co1[1])-int(co2[1]))**2))
+print(distance)
